@@ -400,11 +400,18 @@
       i++;
       if (i === message.length) clearInterval(typing);
     }, 150);
+      if (sessionStorage.getItem("playMusic") === "true") {
+    const audio = document.getElementById("bgm");
+    audio.volume = 0.5;
+    audio.play();
+    sessionStorage.removeItem("playMusic");
+      }
   };
 </script>
 
       </body>
 
 </html>
+
 
 
